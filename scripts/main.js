@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 'use strict';
 
 addEventListener('click', function(ev) {
@@ -23,5 +22,5 @@ addEventListener('click', function(ev) {
 function getElement(item, index) {
   const element = Array.from(item.querySelectorAll('td'))[index].textContent;
 
-  return element;
+  return (isNaN(+element)) ? element : +element;
 }
